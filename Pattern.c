@@ -1,42 +1,18 @@
 #include<stdio.h>
 main()
 {
-    int n,a,b,c,d,e,f=0,i,j;
-    printf("Enter the Width in odd number:");
+    int n,i,j;
+    printf ("Enter number of Row or Column: ");
     scanf ("%d",&n);
-    if(n%2==1)
+    if(n<1)
     {
-        a=n-(n/2);
-        b=n+(n/2);
-        c=b+1;
-        d=n*2;
-        e=d;
-    for (i=0;i<=c;i++)
+        printf("Invalid Input\n");
+        return 0;
+    }
+    for (i=0;i<n;i++)
     {
-        for(j=0;j<=d;j++)
-        {
-            if(i<a)
-            {
-            if(j==a || j==(a-i) || j==(a+i) || j==b || j==(b-i) || j==(b+i))
-                printf("*");
-                else
-                    printf (" ");
-            }
-            else
-            {
-                if(j>=f || j<=e)
-                    printf ("*");
-                else
-                    printf (" ");
-
-            }
-
-        }
-        printf("\n");
-        f++;
-        e--;
+        for (j=1;j<=n;j++)
+            printf("%d ",j);
+    printf("\n");
     }
-    }
-    else printf("\nPlease Enter an odd number as width\n");
-
 }
